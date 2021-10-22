@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Raleway:wght@100&display=swap");
+
+body {
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+/* HEADER STYLING */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* BOARD STYLING */
+.board-wrapper {
+  padding-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 400px;
+  height: 400px;
+  background-color: #f4f2f2;
+  border-radius: 3px;
+}
+
+.tile {
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  width: 133px;
+  height: 133px;
+}
+
+.top-left-tile {
+  border-top: none;
+  border-left: none;
+  border-top-left-radius: 3px;
+}
+
+.top-center-tile {
+  border-top: none;
+}
+
+.top-right-tile {
+  border-top: none;
+  border-right: none;
+  border-top-right-radius: 3px;
+}
+
+.middle-left-tile {
+  border-left: none;
+}
+
+.middle-right-tile {
+  border-right: none;
+}
+
+.bottom-left-tile {
+  border-left: none;
+  border-bottom: none;
+  border-bottom-left-radius: 3px;
+}
+
+.bottom-center-tile {
+  border-bottom: none;
+}
+
+.bottom-right-tile {
+  border-right: none;
+  border-bottom: none;
+  border-bottom-right-radius: 3px;
+}
+
+/* FOOTER */
+
+footer {
+  align-self: flex-end;
+  font-weight: 900;
+  padding: 4px;
+  position: absolute;
+  bottom: 0;
+}
+
+a {
+  color: black;
+}
