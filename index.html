@@ -7,21 +7,24 @@
     <link rel="stylesheet" href="./style.css" />
     <title>tic-tac-toe</title>
   </head>
-  <body>
-    <header>
+  <body class="body">
+    <div class="alert-wrapper">
+      <h2 class="alert-header"></h2>
+    </div>
+    <header class="header">
       <h1>Tic-Tac-Toe</h1>
     </header>
     <div class="board-wrapper">
       <div class="board">
-        <div class="tile top-left-tile"></div>
-        <div class="tile top-center-tile"></div>
-        <div class="tile top-right-tile"></div>
-        <div class="tile middle-left-tile"></div>
-        <div class="tile middle-center-tile"></div>
-        <div class="tile middle-right-tile"></div>
-        <div class="tile bottom-left-tile"></div>
-        <div class="tile bottom-center-tile"></div>
-        <div class="tile bottom-right-tile"></div>
+        <div class="tile top-left-tile" id="top-left-tile"></div>
+        <div class="tile top-center-tile" id="top-center-tile"></div>
+        <div class="tile top-right-tile" id="top-right-tile"></div>
+        <div class="tile middle-left-tile" id="middle-left-tile"></div>
+        <div class="tile middle-center-tile" id="middle-center-tile"></div>
+        <div class="tile middle-right-tile" id="middle-right-tile"></div>
+        <div class="tile bottom-left-tile" id="bottom-left-tile"></div>
+        <div class="tile bottom-center-tile" id="bottom-center-tile"></div>
+        <div class="tile bottom-right-tile" id="bottom-right-tile"></div>
       </div>
     </div>
     <footer class="footer">
@@ -32,5 +35,6 @@
         ></span
       >
     </footer>
+    <script src="./script.js"></script>
   </body>
 </html>

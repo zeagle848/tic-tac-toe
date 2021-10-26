@@ -1,17 +1,41 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Raleway:wght@100&display=swap");
 
-body {
+.body {
   font-family: "Raleway", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   margin: 0;
   padding: 0;
 }
 
+/* ALERT */
+.alert-wrapper {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.alert-header {
+  margin-top: 150px;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  height: 60px;
+  color: white;
+  user-select: none;
+}
+
+.alert-wrapper-visible {
+  display: block;
+}
+
 /* HEADER STYLING */
-header {
+.header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,6 +68,7 @@ header {
   font-size: 40px;
   width: 133px;
   height: 133px;
+  user-select: none;
 }
 
 .top-left-tile {
@@ -88,7 +113,7 @@ header {
 
 /* FOOTER */
 
-footer {
+.footer {
   align-self: flex-end;
   font-weight: 900;
   padding: 4px;
@@ -98,4 +123,10 @@ footer {
 
 a {
   color: black;
+}
+
+/* TEMP CLASS */
+
+.blurred-element {
+  filter: blur(4px);
 }
