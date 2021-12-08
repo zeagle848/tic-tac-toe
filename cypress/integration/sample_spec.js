@@ -1,6 +1,6 @@
 describe('Testing tic-tac-toe', () => {
     beforeEach(() => {
-        cy.visit('http://127.0.0.1:5500/index.html');
+        cy.visit('http://localhost:8080/');
     });
     it('Can click a tile multiple times without overriding the previous move', () => {
         cy.get('#top-left-tile').click();
