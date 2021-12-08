@@ -31,6 +31,8 @@ This application is one of the more simple apps I've developed as a part of TOP.
 
 As an aside I initially thought I could simply check for a column win by transposing a _copy_ of my 2D array and then iterate through each cell in the exact same way I did for the row check. This was before I knew that arrays in JavaScript are reference values. So unbeknownst to me I was transposing the cloned array and the original array. Or rather they were all one array. Thus I ended up simply changing the logic to check for column wins.
 
+If I were to try and use my transpose method now I would need to do a deep clone of the array. Although a little verbose, [this](https://medium.com/@ziyoshams/deep-copying-javascript-arrays-4d5fc45a6e3e) example of a recursive solution would work. Knowning the depth and values of my 2D array makes any solution outlined in [this](https://dev.to/samanthaming/how-to-deep-clone-an-array-in-javascript-3cig) article viable. 
+
 ## Testing
 
 To run the testing environment we need to deploy the application first. The process is the same as what was outlined in the Getting Started section. We begin by making sure all the dependencies are installed by running `nmp install` in the console and then run the dev server by running `npm run serve`. 
