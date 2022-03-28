@@ -7,6 +7,7 @@ import {
     changeTurn,
     checkGameState,
     getCurrentPlayer,
+    endGame,
 } from './state/game';
 import { updateBoard } from './state/game-board';
 
@@ -27,7 +28,10 @@ tiles.forEach((tile) => {
         const selectedTile = event.target.id;
         tile.textContent = currentPlayer.character;
         updateBoard({ tilePosition: selectedTile, turn: currentPlayer.name });
-        checkGameState();
+        const isGameOver = checkGameState();
+        if (isGameWon !== false) {
+            endGame(isGameOver);
+        }
         changeTurn();
     });
 });

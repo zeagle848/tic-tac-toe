@@ -63,7 +63,7 @@ export function checkGameState() {
     const allTiles = getAllTiles();
 
     if (checkDraw()) {
-        endGame('draw');
+        return 'draw';
     }
 
     for (let i = 0; i < 3; i++) {
@@ -76,8 +76,7 @@ export function checkGameState() {
             }
         }
         if (isGameWon) {
-            endGame(startTile.mark);
-            return;
+            return startTile.mark;
         }
     }
 
@@ -91,8 +90,7 @@ export function checkGameState() {
             }
         }
         if (isGameWon) {
-            endGame(startTile.mark);
-            return;
+            return startTile.mark;
         }
     }
 
@@ -101,13 +99,14 @@ export function checkGameState() {
         allTiles[0][0].mark === allTiles[2][2].mark &&
         allTiles[2][2].mark !== 'none'
     ) {
-        endGame(allTiles[0][0].mark);
+        return allTiles[0][0].mark;
     }
     if (
         allTiles[0][2].mark === allTiles[1][1].mark &&
         allTiles[0][2].mark === allTiles[2][0].mark &&
         allTiles[0][2].mark !== 'none'
     ) {
-        endGame(allTiles[0][2].mark);
+        return allTiles[0][2].mark;
     }
+    return false;
 }
